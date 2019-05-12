@@ -1,7 +1,35 @@
-body {
-  position: relative;
-  width: 1440px;
-  height: 1080px;
+* {
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  max-width: 1440px;
+  max-height: 1080px;
   background: #F8F8F8;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light {
+  height: 60px;
+  background-color: inherit;
+}
+
+.darkThemeWithoutChildren {
+  height: 76px;
+  background: linear-gradient(180deg, #090810 0%, #171236 100%);
+}
+
+.darkThemeWithChildren {
+  height: 166px;
+  background: linear-gradient(180deg, #090810 0%, #171236 100%);
 }
