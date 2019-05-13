@@ -1,22 +1,29 @@
 import React from 'react';
 import {compose, withHandlers} from 'recompose';
 import Header from '../../components/Header/Header';
+import Api from '../../Api';
 
-function Login({onClick}) {
+function Login({login, logout}) {
   return (
     <React.Fragment>
       <Header theme="light"/>
       <div className="center">
-        <button onClick={onClick}>Login</button>
+        {!Api.Auth.isLoggedIn 
+          ? (<button onClick={login}>Login</button>) 
+          : (<button onClick={logout}>Logout</button>)}
       </div>
     </React.Fragment>
   );
 };
 
 const enhance = compose(withHandlers({
-  onClick: props => event => {
-    console.log(props);
-    console.log(event);
+  login: props => event => {
+    Api.Auth.login();
+    props.history.push(props.location.state.from.pathname);
+  },
+  logout: props => event => {
+    Api.Auth.logout();
+    props.history.push('/');
   }
 }));
 

@@ -13,11 +13,11 @@ function Header({theme, children}) {
       ? 'darkThemeWithChildren'
       : 'darkThemeWithoutChildren';
 
-  let styles = {
+  /*let styles = {
     color: theme === 'light'
       ? '#2B2B2B'
       : '#FFF'
-  };
+  };*/
 
   return (
     <React.Fragment>
@@ -30,12 +30,12 @@ function Header({theme, children}) {
             : logoDark}
             alt="Apiko"/>
           <div className={s.right}>
-            <div className={s.searchContainer}>
+            <div className={s.searchContainer} style={{height: children ? '126px' : null}}>
               <div className={`${s.btnShell} center`}>shell</div>
               {children}
             </div>
             <div className={`${s.btnLogin} center`}>
-              <Link to="/login" style={styles}>login</Link>
+              <Link to="/login" style={{color: theme === 'light' ? '#2B2B2B' : '#FFF'}}>login</Link>
             </div>
             <img
               className={s.heart}

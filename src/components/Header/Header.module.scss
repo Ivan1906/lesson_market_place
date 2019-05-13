@@ -1,6 +1,7 @@
 .wrapper {
   position: relative;
   top: 0;
+  width: 100vw;
 }
 
 .container {
@@ -31,7 +32,7 @@
       flex-direction: column;
       align-items: flex-end;
       justify-content: space-between;
-      height: 126px;
+      //height: 126px;
       width: 60vw;
 
       .btnShell {
