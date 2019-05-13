@@ -7,9 +7,7 @@ export const Auth = {
 
   init() {
     try {
-      let token = window
-        .localStorage
-        .getItem('token');
+      let token = window.localStorage.getItem('token');
       this._token = JSON.parse(token);
     } catch (e) {
       console.error(e);
@@ -24,23 +22,22 @@ export const Auth = {
   logout() {
     this._token = null;
     try {
-      window
-        .localStorage
-        .removeItem('token');
+      window.localStorage.removeItem('token');
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   },
 
   _setToken() {
     try {
-      window
-        .localStorage
-        .setItem('token', JSON.stringify(this._token));
+      window.localStorage.setItem(
+        'token',
+        JSON.stringify(this._token),
+      );
     } catch (e) {
       console.error(e);
     }
-  }
+  },
 };
 
 export function init() {

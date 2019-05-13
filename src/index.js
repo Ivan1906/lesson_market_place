@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Router from './scenes/router';
 import Footer from './components/Footer/Footer';
 import Api from './Api';
@@ -16,12 +16,11 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Router/>
-        <Footer/>
+        <Router />
+        <Footer />
       </BrowserRouter>
-    )
-  };
+    );
+  }
 }
 
-ReactDOM.render(
-  <App/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

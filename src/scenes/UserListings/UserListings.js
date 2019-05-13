@@ -6,11 +6,11 @@ function UserListings() {
   return (
     <React.Fragment>
       <Header theme="dark">
-        <Search/>
+        <Search />
       </Header>
       <div>UserListings</div>
     </React.Fragment>
   );
-};
+}
 
 export default UserListings;

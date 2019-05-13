@@ -5,13 +5,15 @@ function Footer() {
   return (
     <React.Fragment>
       <div className={s.wrapper}>
-        <div className={s.line}></div>
+        <div className={s.line} />
         <div className={`${s.container} center`}>
-          <div className={s.text}>Copyright © 2017. Privacy Policy.</div>
+          <div className={s.text}>
+            Copyright © 2017. Privacy Policy.
+          </div>
         </div>
       </div>
     </React.Fragment>
   );
-};
+}
 
 export default Footer;

@@ -6,11 +6,11 @@ function Home() {
   return (
     <React.Fragment>
       <Header theme="dark">
-        <Search/>
+        <Search />
       </Header>
       <div>Home</div>
     </React.Fragment>
   );
-};
+}
 
 export default Home;
